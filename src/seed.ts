@@ -34,5 +34,15 @@ for (const [t, mk, md, y, km, sp, rp, inc, s, e] of bikes) {
        CASE WHEN $10::int<=0 THEN 'LIVE' ELSE 'SCHEDULED' END, $12)`,
     [t, mk, md, y, km, 'Well maintained, single owner, all service records available.', sp, rp, inc, s, e, adminId]);
 }
+const images: Record<string, string> = {
+  'Royal Enfield Classic 350': '/bikes/royal-enfield.jpg',
+  'Yamaha R15 V3': '/bikes/yamaha-r15.jpg',
+  "Honda CB350 H'ness": '/bikes/honda-cb350.jpg',
+  'KTM Duke 200': '/bikes/ktm-duke.jpg',
+  'Bajaj Pulsar NS200': '/bikes/pulsar-ns200.jpg',
+  'TVS Apache RTR 160 4V': '/bikes/tvs-apache.jpg',
+};
+for (const [title, url] of Object.entries(images))
+  await pool.query(`UPDATE auctions SET image_url=$2 WHERE title=$1`, [title, url]);
 console.log('seeded. admin@bikes.test / Admin123!  buyer1..3@bikes.test / Buyer123!');
 await pool.end();
