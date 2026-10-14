@@ -3,7 +3,7 @@
 Registered users bid on used motorcycles in real time. Admins create and manage auctions.
 Multiple auctions run at once; bids are concurrency-safe; auctions start and close automatically.
 
-**Live demo:** `<your-deployed-url>`
+**Live demo:** `https://bike-auction-ey58.onrender.com`
 
 | Role  | Email               | Password   |
 |-------|---------------------|------------|
