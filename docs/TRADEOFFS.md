@@ -1,7 +1,5 @@
 # Assumptions & Trade-offs
 
-> Draft: rewrite the "why" in your own words and delete anything that isn't true of your final version.
-
 ## Assumptions
 - Single currency (INR), stored as integer paise. One bike per auction.
 - No payments or escrow: "SOLD" records the winner; settlement happens off-platform.
